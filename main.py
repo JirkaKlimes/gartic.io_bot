@@ -7,6 +7,7 @@ from math import sqrt
 from PIL import ImageGrab
 import win32api, win32con
 
+# https://stackoverflow.com/questions/5906693/how-to-reduce-the-number-of-colors-in-an-image-with-opencv
 def kmeans_color_quantization(image, clusters=8, rounds=1):
     h, w = image.shape[:2]
     samples = np.zeros([h*w,3], dtype=np.float32)
